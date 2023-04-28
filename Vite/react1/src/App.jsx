@@ -47,7 +47,7 @@ function App() {
   }, [countdown]);
 
   const handleResetTimer = () => {
-    setCountdown(5);
+    setCountdown(300);
   };
 
   return (
@@ -64,7 +64,7 @@ function App() {
       <div className="card">
         {vals.map((val) => (
           <div key={val.id}>
-            <h1>ค่าน้ำหนักจาก Load Cell = {val.value} KG</h1>
+            <h1 style={{ color: "skyblue"}}>ค่าน้ำหนักจาก Load Cell = {val.value} KG</h1>
           </div>
         ))}
       </div>
@@ -76,7 +76,7 @@ function App() {
         )}
       </div>
       <h2 style={{ color: "red" }}>Debug zone</h2>
-      <button onClick={() => alert('นั่งนานไปแล้ว! ลุกออกไปเดินบ้างง')}>Activate Alert</button>
+      <button onClick={() => alert('นั่งนานไปแล้ว! ลุกออกไปเดินบ้างง')}>ทดสอบ Alert</button>
       <button onClick={() => setCountdown(5)}>Set Timer to 5 Seconds</button>
     </div>
   );
